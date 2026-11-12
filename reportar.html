@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para reportar animales rescatados">
+    <title>Reportar Rescate</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Registro de Animales Rescatados</h1>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reportar.html">Reportar un rescate</a></li>
+                <li><a href="rescates.html">Consultar rescates</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulario de reporte</h2>
+
+            <p>
+                Complete los siguientes datos para informar sobre
+                un animal que necesita ayuda.
+            </p>
+
+            <form action="rescates.html" method="get">
+
+                <fieldset>
+                    <legend>Información del animal</legend>
+
+                    <p>
+                        <label for="nombre">Nombre del animal:</label>
+                        <input type="text" id="nombre" name="nombre"
+                        required minlength="2">
+                    </p>
+
+                    <p>
+                        <label for="especie">Especie:</label>
+                        <select id="especie" name="especie" required>
+                            <option value="">Seleccione una especie</option>
+                            <option value="Perro">Perro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Fauna silvestre">Fauna silvestre</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="edad">Edad aproximada:</label>
+                        <input type="number" id="edad" name="edad"
+                        min="0" max="100" required>
+                    </p>
+
+                    <p>
+                        <label for="condicion">Condición del animal:</label>
+                        <select id="condicion" name="condicion" required>
+                            <option value="">Seleccione una condición</option>
+                            <option value="Herido">Herido</option>
+                            <option value="Abandonado">Abandonado</option>
+                            <option value="Enfermo">Enfermo</option>
+                            <option value="Extraviado">Extraviado</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información del rescate</legend>
+
+                    <p>
+                        <label for="fecha">Fecha del reporte:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </p>
+
+                    <p>
+                        <label for="ubicacion">Lugar donde se encuentra:</label>
+                        <input type="text" id="ubicacion" name="ubicacion"
+                        required minlength="5">
+                    </p>
+
+                    <p>
+                        <label for="descripcion">Descripción del caso:</label>
+                        <textarea id="descripcion" name="descripcion"
+                        rows="5" cols="40" required minlength="10"></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos del reportante</legend>
+
+                    <p>
+                        <label for="reportante">Nombre completo:</label>
+                        <input type="text" id="reportante" name="reportante"
+                        required minlength="3">
+                    </p>
+
+                    <p>
+                        <label for="telefono">Número de teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono"
+                        pattern="[0-9+() -]{7,15}" required>
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Enviar reporte</button>
+                <button type="reset">Limpiar formulario</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sistema de Control de Rescate y Adopción Animal</p>
+        <p>Universidad Técnica de Manabí - 2026</p>
+    </footer>
+
+</body>
+</html>
